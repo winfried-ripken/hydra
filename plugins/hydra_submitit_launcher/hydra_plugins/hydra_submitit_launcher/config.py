@@ -27,7 +27,8 @@ class BaseQueueConf:
     name: str = "${hydra.job.name}"
     # redirect stderr to stdout
     stderr_to_stdout: bool = False
-
+    # Custom python executable for SlurmExecutor
+    python: Optional[str] = None
 
 @dataclass
 class SlurmQueueConf(BaseQueueConf):
